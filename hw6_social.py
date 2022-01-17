@@ -244,7 +244,18 @@ Parameters: dataframe ; str
 Returns: float
 '''
 def getHashtagSentiment(data, hashtag):
-    return
+    c=0
+    count=0
+    for i,r in data.iterrows():
+        if hashtag in findHashtags(r["text"]):
+            if r["sentiment"] =="positive":
+                count+=1
+            elif r["sentiment"] =="negative":
+                count-=1
+            elif r["sentiment"] =="neutral":
+                count+=0
+            c+=1
+    return count/c
 
 
 ### PART 3 ###
