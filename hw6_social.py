@@ -267,7 +267,17 @@ Parameters: dict mapping strs to ints ; str
 Returns: None
 '''
 def graphStateCounts(stateCounts, title):
+    
     import matplotlib.pyplot as plt
+    state=[i for i in stateCounts.keys()]
+    num=[j for j in stateCounts.values()]
+    plt.bar(state, num, width=0.6)
+    plt.xticks(ticks=list(range(len(state))), labels=state, rotation="vertical")
+    plt.xlabel("States")
+    plt.ylabel("Values of states")
+    plt.title(title)
+    plt.show()
+    
     return
 
 
@@ -383,7 +393,8 @@ if __name__ == "__main__":
     # test.testGetDataCountByState(df)
     # test.testGetDataForRegion(df)
     # test.testGetHashtagRates(df)
-    test.testMostCommonHashtags(df)
+    # test.testMostCommonHashtags(df)
+    test.testGetHashtagSentiment(df)
 
     ## Uncomment these for Week 3 ##
     """print("\n" + "#"*15 + " WEEK 3 OUTPUT " + "#" * 15 + "\n")
