@@ -401,8 +401,8 @@ def scatterPlot(xValues, yValues, labels, title):
 
 # This code runs the test cases to check your work
 if __name__ == "__main__":
-    # print("\n" + "#"*15 + " WEEK 1 TESTS " +  "#" * 16 + "\n")
-    # # test.week1Tests()
+    print("\n" + "#"*15 + " WEEK 1 TESTS " +  "#" * 16 + "\n")
+    test.week1Tests()
     # print("\n" + "#"*15 + " WEEK 1 OUTPUT " + "#" * 15 + "\n")
     # test.runWeek1()
     # test.testParseName()
@@ -415,21 +415,21 @@ if __name__ == "__main__":
     # test.testAddSentimentColumn()
     
     ## Uncomment these for Week 2 ##
-    """print("\n" + "#"*15 + " WEEK 2 TESTS " +  "#" * 16 + "\n")
+    print("\n" + "#"*15 + " WEEK 2 TESTS " +  "#" * 16 + "\n")
     test.week2Tests()
-    print("\n" + "#"*15 + " WEEK 2 OUTPUT " + "#" * 15 + "\n")
-    test.runWeek2()"""
-    df = makeDataFrame("data/politicaldata.csv")
-    stateDf = makeDataFrame("data/statemappings.csv")
-    addColumns(df, stateDf)
-    addSentimentColumn(df)
+    # print("\n" + "#"*15 + " WEEK 2 OUTPUT " + "#" * 15 + "\n")
+    # test.runWeek2()
+    # df = makeDataFrame("data/politicaldata.csv")
+    # stateDf = makeDataFrame("data/statemappings.csv")
+    # addColumns(df, stateDf)
+    # addSentimentColumn(df)
     # test.testGetDataCountByState(df)
     # test.testGetDataForRegion(df)
     # test.testGetHashtagRates(df)
     # test.testMostCommonHashtags(df)
-    test.testGetHashtagSentiment(df)
+    # test.testGetHashtagSentiment(df)
 
     ## Uncomment these for Week 3 ##
-    """print("\n" + "#"*15 + " WEEK 3 OUTPUT " + "#" * 15 + "\n")
-    test.runWeek3()"""
+    print("\n" + "#"*15 + " WEEK 3 OUTPUT " + "#" * 15 + "\n")
+    test.runWeek3()
 
